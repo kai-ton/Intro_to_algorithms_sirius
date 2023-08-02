@@ -1,0 +1,15 @@
+n = int(input())
+a = set(map(int, input().split()))
+n = int(input())
+b = set(map(int, input().split()))
+n = int(input())
+A = set(map(int, input().split()))
+n = int(input())
+B = set(map(int, input().split()))
+if A == A - a and B - b:
+    print(len(A | a))
+    print(*sorted(list(A | a)))
+    print(len(b) + 1)
+    print(*sorted(list(b) + [min(list(B - b))]))
+else:
+    print(-1)
